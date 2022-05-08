@@ -1,3 +1,4 @@
+import 'package:beaneball/line_score_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -95,6 +96,15 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: LineScoreWidget(
+                homeTeamLineScore: LineScore(
+                    "New York Mets", List.filled(9, null), [], 0, 0, 0),
+                awayTeamLineScore: LineScore(
+                    "Atlanta Braves", List.filled(9, null), [], 0, 0, 0),
+              ),
+            ),
             const Text(
               'You have pushed the button this many times:',
             ),
